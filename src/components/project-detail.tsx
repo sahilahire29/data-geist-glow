@@ -14,7 +14,7 @@ export type ProjectDetailProps = {
   architecture: { label: string; detail: string }[];
   results: { value: string; label: string }[];
   children: ReactNode;
-  nextTo: "/projects/lawbot" | "/projects/smart-contract-detection" | "/projects/computer-vision-suite";
+  nextTo: "/projects/lawbot" | "/projects/smart-contract-detection" | "/projects/esrgan" | "/projects/image-colorization";
   nextLabel: string;
 };
 
