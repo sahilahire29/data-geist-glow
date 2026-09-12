@@ -10,33 +10,78 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsComputerVisionSuiteRouteImport } from './routes/projects.computer-vision-suite'
+import { Route as ProjectsLawbotRouteImport } from './routes/projects.lawbot'
+import { Route as ProjectsSmartContractDetectionRouteImport } from './routes/projects.smart-contract-detection'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsComputerVisionSuiteRoute =
+  ProjectsComputerVisionSuiteRouteImport.update({
+    id: '/projects/computer-vision-suite',
+    path: '/projects/computer-vision-suite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectsLawbotRoute = ProjectsLawbotRouteImport.update({
+  id: '/projects/lawbot',
+  path: '/projects/lawbot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsSmartContractDetectionRoute =
+  ProjectsSmartContractDetectionRouteImport.update({
+    id: '/projects/smart-contract-detection',
+    path: '/projects/smart-contract-detection',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/projects/computer-vision-suite': typeof ProjectsComputerVisionSuiteRoute
+  '/projects/lawbot': typeof ProjectsLawbotRoute
+  '/projects/smart-contract-detection': typeof ProjectsSmartContractDetectionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/projects/computer-vision-suite': typeof ProjectsComputerVisionSuiteRoute
+  '/projects/lawbot': typeof ProjectsLawbotRoute
+  '/projects/smart-contract-detection': typeof ProjectsSmartContractDetectionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/projects/computer-vision-suite': typeof ProjectsComputerVisionSuiteRoute
+  '/projects/lawbot': typeof ProjectsLawbotRoute
+  '/projects/smart-contract-detection': typeof ProjectsSmartContractDetectionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/projects/computer-vision-suite'
+    | '/projects/lawbot'
+    | '/projects/smart-contract-detection'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/projects/computer-vision-suite'
+    | '/projects/lawbot'
+    | '/projects/smart-contract-detection'
+  id:
+    | '__root__'
+    | '/'
+    | '/projects/computer-vision-suite'
+    | '/projects/lawbot'
+    | '/projects/smart-contract-detection'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProjectsComputerVisionSuiteRoute: typeof ProjectsComputerVisionSuiteRoute
+  ProjectsLawbotRoute: typeof ProjectsLawbotRoute
+  ProjectsSmartContractDetectionRoute: typeof ProjectsSmartContractDetectionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +93,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/computer-vision-suite': {
+      id: '/projects/computer-vision-suite'
+      path: '/projects/computer-vision-suite'
+      fullPath: '/projects/computer-vision-suite'
+      preLoaderRoute: typeof ProjectsComputerVisionSuiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/lawbot': {
+      id: '/projects/lawbot'
+      path: '/projects/lawbot'
+      fullPath: '/projects/lawbot'
+      preLoaderRoute: typeof ProjectsLawbotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/smart-contract-detection': {
+      id: '/projects/smart-contract-detection'
+      path: '/projects/smart-contract-detection'
+      fullPath: '/projects/smart-contract-detection'
+      preLoaderRoute: typeof ProjectsSmartContractDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProjectsComputerVisionSuiteRoute: ProjectsComputerVisionSuiteRoute,
+  ProjectsLawbotRoute: ProjectsLawbotRoute,
+  ProjectsSmartContractDetectionRoute: ProjectsSmartContractDetectionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
