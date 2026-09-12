@@ -12,7 +12,12 @@ export function NeuralMesh() {
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,var(--mesh-glow),transparent_55%)]" />
       <svg className="absolute inset-0 h-full w-full opacity-45" viewBox="0 0 100 100" preserveAspectRatio="none">
-        {lines.map(([a,b], i) => <line key={i} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="currentColor" strokeWidth="0.12" className="text-primary" />)}
+        {lines.map(([a,b], i) => {
+          const start = nodes[a];
+          const end = nodes[b];
+          if (!start || !end) return null;
+          return <line key={i} x1={start[0]} y1={start[1]} x2={end[0]} y2={end[1]} stroke="currentColor" strokeWidth="0.12" className="text-primary" />;
+        })}
         {nodes.map(([x,y], i) => (
           <motion.circle key={i} cx={x} cy={y} r="0.55" className={i % 3 === 0 ? "fill-accent" : "fill-primary"}
             animate={reduced ? undefined : { opacity: [0.25, 1, 0.25], r: [0.4, 0.75, 0.4] }}

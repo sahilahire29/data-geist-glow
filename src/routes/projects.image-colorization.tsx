@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Droplets, Layers3, SplitSquareHorizontal } from "lucide-react";
 import { ProjectDetail } from "@/components/project-detail";
-import colorizedImage from "@/assets/colorization-demo.jpg";
+import colorizedImage from "@/assets/colorization-demo.jpg.asset.json";
 
 export const Route = createFileRoute("/projects/image-colorization")({
   head: () => ({
@@ -31,13 +31,13 @@ function ResultsComparison() {
       <div className="grid md:grid-cols-2">
         <figure className="border-b border-border md:border-b-0 md:border-r">
           <div className="aspect-[3/2] overflow-hidden bg-background">
-            <img src={colorizedImage} alt="Grayscale historic Indian street input demonstration" width={1536} height={1024} loading="lazy" className="h-full w-full object-cover grayscale" />
+            <img src={colorizedImage.url} alt="Grayscale historic Indian street input demonstration" width={1536} height={1024} loading="lazy" className="h-full w-full object-cover grayscale" />
           </div>
           <figcaption className="flex items-center justify-between gap-3 p-4 text-xs"><span className="font-mono text-muted-foreground">INPUT / L CHANNEL</span><span className="text-muted-foreground">Structure only</span></figcaption>
         </figure>
         <figure>
           <div className="aspect-[3/2] overflow-hidden bg-background">
-            <img src={colorizedImage} alt="Realistically colorized historic Indian street output demonstration" width={1536} height={1024} loading="lazy" className="h-full w-full object-cover" />
+            <img src={colorizedImage.url} alt="Realistically colorized historic Indian street output demonstration" width={1536} height={1024} loading="lazy" className="h-full w-full object-cover" />
           </div>
           <figcaption className="flex items-center justify-between gap-3 p-4 text-xs"><span className="font-mono text-primary">cGAN / AB CHANNELS</span><span className="text-muted-foreground">Predicted color</span></figcaption>
         </figure>

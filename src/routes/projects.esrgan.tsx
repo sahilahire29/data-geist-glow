@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ScanSearch, Sparkles, SplitSquareHorizontal } from "lucide-react";
 import { ProjectDetail } from "@/components/project-detail";
-import enhancedImage from "@/assets/esrgan-demo.jpg";
-import lowResolutionImage from "@/assets/esrgan-input.jpg";
+import enhancedImage from "@/assets/esrgan-demo.jpg.asset.json";
+import lowResolutionImage from "@/assets/esrgan-input.jpg.asset.json";
 
 export const Route = createFileRoute("/projects/esrgan")({
   head: () => ({
@@ -32,13 +32,13 @@ function ResultsComparison() {
       <div className="grid md:grid-cols-2">
         <figure className="border-b border-border md:border-b-0 md:border-r">
           <div className="aspect-[3/2] overflow-hidden bg-background">
-            <img src={lowResolutionImage} alt="Pixelated low-resolution architectural input demonstration" width={192} height={128} loading="lazy" className="h-full w-full object-cover [image-rendering:pixelated]" />
+            <img src={lowResolutionImage.url} alt="Pixelated low-resolution architectural input demonstration" width={192} height={128} loading="lazy" className="h-full w-full object-cover [image-rendering:pixelated]" />
           </div>
           <figcaption className="flex items-center justify-between gap-3 p-4 text-xs"><span className="font-mono text-muted-foreground">INPUT / 1×</span><span className="text-muted-foreground">Soft edges, lost texture</span></figcaption>
         </figure>
         <figure>
           <div className="aspect-[3/2] overflow-hidden bg-background">
-            <img src={enhancedImage} alt="Sharp high-resolution architectural output demonstration" width={1536} height={1024} loading="lazy" className="h-full w-full object-cover" />
+            <img src={enhancedImage.url} alt="Sharp high-resolution architectural output demonstration" width={1536} height={1024} loading="lazy" className="h-full w-full object-cover" />
           </div>
           <figcaption className="flex items-center justify-between gap-3 p-4 text-xs"><span className="font-mono text-primary">ESRGAN / 4×</span><span className="text-muted-foreground">Recovered edges and texture</span></figcaption>
         </figure>
