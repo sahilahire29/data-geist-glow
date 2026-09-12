@@ -26,7 +26,8 @@ export const Route = createFileRoute("/")({
 const projects = [
   { number: "01", title: "LawBot", subtitle: "AI-Powered Law Consultant", description: "A low-latency legal assistant combining Mistral-7B with retrieval-augmented generation and semantic case search.", tags: ["Mistral-7B", "FAISS", "FastAPI"], to: "/projects/lawbot" as const, icon: BrainCircuit },
   { number: "02", title: "Smart Contract", subtitle: "Vulnerability Detection", description: "A CodeBERT deep learning pipeline trained to identify security vulnerabilities in Solidity contracts with 99.96% accuracy.", tags: ["PyTorch", "CodeBERT", "Solidity"], to: "/projects/smart-contract-detection" as const, icon: ShieldCheck },
-  { number: "03", title: "Advanced CV Suite", subtitle: "Generative Vision Systems", description: "A unified research suite spanning super-resolution, image translation, and intelligent grayscale colorization.", tags: ["ESRGAN", "Pix2Pix", "OpenCV"], to: "/projects/computer-vision-suite" as const, icon: Sparkles },
+  { number: "03", title: "ESRGAN Image Enhancer", subtitle: "Single-Image Super-Resolution", description: "A deep-learning pipeline that reconstructs sharp, high-resolution images from blurry inputs using RRDBs and perceptual loss.", tags: ["ESRGAN", "PyTorch", "OpenCV"], to: "/projects/esrgan" as const, icon: Sparkles },
+  { number: "04", title: "Image Colorization", subtitle: "Context-Aware cGAN", description: "A U-Net and PatchGAN system that predicts vivid, realistic color for grayscale photographs while preserving object boundaries.", tags: ["cGAN", "U-Net", "LAB"], to: "/projects/image-colorization" as const, icon: Sparkles },
 ];
 
 const skillGroups = [
