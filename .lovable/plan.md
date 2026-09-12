@@ -5,13 +5,14 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 
 ## Experience
 - Create a compact navigation bar with anchor links and a clear availability/status signal.
-- Build a full-width first screen featuring “Sahil Ahire,” the supplied positioning statement, two calls to action, and a subtle animated particle/mesh atmosphere.
+- Build a full-width first screen featuring “Sahil Ahire,” the Generative AI/LLM/Computer Vision positioning statement, “Explore AI Models” and “Download Resume” actions, and a subtle animated neural-network mesh.
+- Add an About section titled “Bridging Heavy Engineering with Scalable AI,” covering the MIT ADT University degree, Prodigy InfoTech internship, and Microsoft Azure AI credential.
 - Present three substantial project panels in a responsive asymmetric grid:
-  - **Algorithmic Trading Engine:** interactive Recharts equity curve rising roughly 40%, with readable axes, tooltip, metrics, and technology labels.
-  - **Offline RAG & Vector Search:** live mock query input that filters/displays three convincing JSON-style vector matches with similarity scores.
-  - **Computer Vision Crowd Analytics:** a visual pipeline showing camera input, anonymized demographic approximation, analysis, and ad-board output.
-- Add a skills grid and an engineering journey timeline featuring the June 2026 B.Tech graduation statement.
-- Add a glass-styled contact form, email link, and GitHub/LinkedIn placeholder links, followed by a minimal footer.
+  - **LawBot:** a clickable mock chat that types a generated legal summary, alongside the Mistral-7B, FastAPI, React, WebSockets, FAISS/RAG, and IJARSCT details.
+  - **Smart Contract Vulnerability Detection:** a Recharts-powered circular accuracy visualization and compact metrics dashboard highlighting the supplied 99.96% result and CodeBERT pipeline.
+  - **Advanced Computer Vision Suite:** a visual model pipeline for ESRGAN super-resolution, Pix2Pix translation, and CNN colorization.
+- Add categorized skill groups for languages/frameworks, AI/ML, and databases, plus Microsoft Generative AI and GDSC TensorFlow certification badges.
+- Add a glass-styled contact form, `ahiresahil101@gmail.com`, LinkedIn and GitHub profile links, followed by a minimal footer.
 
 ## Visual Direction
 - Deep slate background with cyan and electric-violet accents, translucent surfaces, fine borders, restrained glow, and layered technical details.
@@ -20,11 +21,12 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 - Framer Motion scroll reveals with staggered children, subtle card interactions, and reduced-motion fallbacks.
 
 ## Interaction Details
-- “Explore Systems” scrolls to projects; “Contact” scrolls to the form.
-- Chart tooltip and responsive resizing work immediately.
-- RAG search updates results as the visitor types, with an empty-query prompt and three seeded mock matches.
-- Contact fields receive accessible labels, validation, and a mail-client submission to `hello@sahilahire.tech`; no message storage or external service is introduced.
-- Social links remain clearly marked placeholders until real profile URLs are provided.
+- “Explore AI Models” scrolls to projects.
+- “Download Resume” uses a clearly labeled placeholder download state because no resume file was supplied.
+- LawBot’s prompt action produces an immediate typewriter-style legal summary and can be replayed.
+- The accuracy ring and metrics resize cleanly and expose accessible labels.
+- Contact fields receive accessible labels, validation, and a mail-client submission to `ahiresahil101@gmail.com`; no message storage or external service is introduced.
+- Social icons link to `linkedin.com/in/sahilahire` and `github.com/sahilahire29`.
 
 ## Technical Implementation
 - Replace the placeholder `/` page and add route-specific title, description, Open Graph, and Twitter metadata.
@@ -35,5 +37,5 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 
 ## Verification
 - Confirm the production preview compiles without errors.
-- Exercise navigation, live search, chart tooltip, and form validation.
+- Exercise navigation, LawBot typing, the accuracy visualization, social links, and form validation.
 - Check desktop and mobile screenshots for spacing, legibility, visual balance, and overlap.
