@@ -33,20 +33,10 @@ Display these 3 projects in a masonry or grid layout. Make them interactive usin
 - Display email: hello@sahilahire.tech
 - Include placeholder icon links for GitHub and LinkedIn.
 
-Technical Constraints for Lovable:
+Technical Constraints:
 - Ensure all components are fully responsive (mobile-first).
 - Use Tailwind for all styling. Do not use custom CSS files.
 - Ensure the interactive elements (Recharts and the mock RAG search) function immediately in the preview.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/da1e5738-14e0-4341-9995-a640ad48835f).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
