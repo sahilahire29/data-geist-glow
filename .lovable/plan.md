@@ -7,10 +7,12 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 - Create a compact navigation bar with anchor links and a clear availability/status signal.
 - Build a full-width first screen featuring “Sahil Ahire,” the Generative AI/LLM/Computer Vision positioning statement, “Explore AI Models” and “Download Resume” actions, and a subtle animated neural-network mesh.
 - Add an About section titled “Bridging Heavy Engineering with Scalable AI,” covering the MIT ADT University degree, Prodigy InfoTech internship, and Microsoft Azure AI credential.
-- Present three substantial project panels in a responsive asymmetric grid:
-  - **LawBot:** a clickable mock chat that types a generated legal summary, alongside the Mistral-7B, FastAPI, React, WebSockets, FAISS/RAG, and IJARSCT details.
-  - **Smart Contract Vulnerability Detection:** a Recharts-powered circular accuracy visualization and compact metrics dashboard highlighting the supplied 99.96% result and CodeBERT pipeline.
-  - **Advanced Computer Vision Suite:** a visual model pipeline for ESRGAN super-resolution, Pix2Pix translation, and CNN colorization.
+- Present three concise project previews in a responsive asymmetric grid, each showing its name, brief description, key technologies, and a clear link to a dedicated detail page.
+- Build a full detail page for each project:
+  - **LawBot:** problem, Mistral-7B/FastAPI/React/WebSockets architecture, FAISS RAG flow, implementation notes, IJARSCT research outcome, and a clickable mock chat that types a generated legal summary.
+  - **Smart Contract Vulnerability Detection:** problem, PyTorch/Hugging Face/CodeBERT training architecture, methodology, evaluation metrics, and a Recharts-powered accuracy visualization highlighting the supplied 99.96% result.
+  - **Advanced Computer Vision Suite:** problem, ESRGAN/Pix2Pix/CNN model pipelines, architecture stages, sample result comparisons, and key outcomes.
+- Give each detail page consistent navigation back to the project index and direct movement between projects.
 - Add categorized skill groups for languages/frameworks, AI/ML, and databases, plus Microsoft Generative AI and GDSC TensorFlow certification badges.
 - Add a glass-styled contact form, `ahiresahil101@gmail.com`, LinkedIn and GitHub profile links, followed by a minimal footer.
 
@@ -21,7 +23,8 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 - Framer Motion scroll reveals with staggered children, subtle card interactions, and reduced-motion fallbacks.
 
 ## Interaction Details
-- “Explore AI Models” scrolls to projects.
+- “Explore AI Models” navigates to the project showcase.
+- Selecting any project preview opens its own shareable page with full details, architecture, and results rather than expanding the card in place.
 - “Download Resume” uses a clearly labeled placeholder download state because no resume file was supplied.
 - LawBot’s prompt action produces an immediate typewriter-style legal summary and can be replayed.
 - The accuracy ring and metrics resize cleanly and expose accessible labels.
@@ -29,7 +32,7 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 - Social icons link to `linkedin.com/in/sahilahire` and `github.com/sahilahire29`.
 
 ## Technical Implementation
-- Replace the placeholder `/` page and add route-specific title, description, Open Graph, and Twitter metadata.
+- Replace the placeholder `/` page, add one route per project, and provide unique title, description, Open Graph, and Twitter metadata for every page.
 - Install `framer-motion`; use the existing React, Tailwind CSS v4, Recharts, and Lucide packages.
 - Keep styling in Tailwind class names; use the existing global stylesheet only to define semantic theme/font tokens and base document behavior, not a new custom stylesheet.
 - Load Inter through the document head and preserve accessible focus states, semantic landmarks, chart labeling, and keyboard operation.
@@ -37,5 +40,5 @@ Build a polished one-page portfolio for Sahil Ahire with a deep dark cyber-physi
 
 ## Verification
 - Confirm the production preview compiles without errors.
-- Exercise navigation, LawBot typing, the accuracy visualization, social links, and form validation.
+- Exercise every project preview/detail-page path, back/next navigation, LawBot typing, the accuracy visualization, social links, and form validation.
 - Check desktop and mobile screenshots for spacing, legibility, visual balance, and overlap.
