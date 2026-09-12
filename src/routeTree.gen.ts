@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsComputerVisionSuiteRouteImport } from './routes/projects.computer-vision-suite'
+import { Route as ProjectsEsrganRouteImport } from './routes/projects.esrgan'
+import { Route as ProjectsImageColorizationRouteImport } from './routes/projects.image-colorization'
 import { Route as ProjectsLawbotRouteImport } from './routes/projects.lawbot'
 import { Route as ProjectsSmartContractDetectionRouteImport } from './routes/projects.smart-contract-detection'
 
@@ -23,6 +25,17 @@ const ProjectsComputerVisionSuiteRoute =
   ProjectsComputerVisionSuiteRouteImport.update({
     id: '/projects/computer-vision-suite',
     path: '/projects/computer-vision-suite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectsEsrganRoute = ProjectsEsrganRouteImport.update({
+  id: '/projects/esrgan',
+  path: '/projects/esrgan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsImageColorizationRoute =
+  ProjectsImageColorizationRouteImport.update({
+    id: '/projects/image-colorization',
+    path: '/projects/image-colorization',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ProjectsLawbotRoute = ProjectsLawbotRouteImport.update({
@@ -40,12 +53,16 @@ const ProjectsSmartContractDetectionRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/projects/computer-vision-suite': typeof ProjectsComputerVisionSuiteRoute
+  '/projects/esrgan': typeof ProjectsEsrganRoute
+  '/projects/image-colorization': typeof ProjectsImageColorizationRoute
   '/projects/lawbot': typeof ProjectsLawbotRoute
   '/projects/smart-contract-detection': typeof ProjectsSmartContractDetectionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/projects/computer-vision-suite': typeof ProjectsComputerVisionSuiteRoute
+  '/projects/esrgan': typeof ProjectsEsrganRoute
+  '/projects/image-colorization': typeof ProjectsImageColorizationRoute
   '/projects/lawbot': typeof ProjectsLawbotRoute
   '/projects/smart-contract-detection': typeof ProjectsSmartContractDetectionRoute
 }
@@ -53,6 +70,8 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/projects/computer-vision-suite': typeof ProjectsComputerVisionSuiteRoute
+  '/projects/esrgan': typeof ProjectsEsrganRoute
+  '/projects/image-colorization': typeof ProjectsImageColorizationRoute
   '/projects/lawbot': typeof ProjectsLawbotRoute
   '/projects/smart-contract-detection': typeof ProjectsSmartContractDetectionRoute
 }
@@ -61,18 +80,24 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/projects/computer-vision-suite'
+    | '/projects/esrgan'
+    | '/projects/image-colorization'
     | '/projects/lawbot'
     | '/projects/smart-contract-detection'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/projects/computer-vision-suite'
+    | '/projects/esrgan'
+    | '/projects/image-colorization'
     | '/projects/lawbot'
     | '/projects/smart-contract-detection'
   id:
     | '__root__'
     | '/'
     | '/projects/computer-vision-suite'
+    | '/projects/esrgan'
+    | '/projects/image-colorization'
     | '/projects/lawbot'
     | '/projects/smart-contract-detection'
   fileRoutesById: FileRoutesById
@@ -80,6 +105,8 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ProjectsComputerVisionSuiteRoute: typeof ProjectsComputerVisionSuiteRoute
+  ProjectsEsrganRoute: typeof ProjectsEsrganRoute
+  ProjectsImageColorizationRoute: typeof ProjectsImageColorizationRoute
   ProjectsLawbotRoute: typeof ProjectsLawbotRoute
   ProjectsSmartContractDetectionRoute: typeof ProjectsSmartContractDetectionRoute
 }
@@ -98,6 +125,20 @@ declare module '@tanstack/react-router' {
       path: '/projects/computer-vision-suite'
       fullPath: '/projects/computer-vision-suite'
       preLoaderRoute: typeof ProjectsComputerVisionSuiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/esrgan': {
+      id: '/projects/esrgan'
+      path: '/projects/esrgan'
+      fullPath: '/projects/esrgan'
+      preLoaderRoute: typeof ProjectsEsrganRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/image-colorization': {
+      id: '/projects/image-colorization'
+      path: '/projects/image-colorization'
+      fullPath: '/projects/image-colorization'
+      preLoaderRoute: typeof ProjectsImageColorizationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/lawbot': {
@@ -120,6 +161,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsComputerVisionSuiteRoute: ProjectsComputerVisionSuiteRoute,
+  ProjectsEsrganRoute: ProjectsEsrganRoute,
+  ProjectsImageColorizationRoute: ProjectsImageColorizationRoute,
   ProjectsLawbotRoute: ProjectsLawbotRoute,
   ProjectsSmartContractDetectionRoute: ProjectsSmartContractDetectionRoute,
 }
