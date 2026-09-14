@@ -54,9 +54,16 @@ function Index() {
                 Specializing in <span className="text-foreground">Generative AI</span>, <span className="text-foreground">LLMs</span>, and <span className="text-foreground">Computer Vision</span> — translating ambitious models into reliable systems.
               </motion.p>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7, delay: .3 }} className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="h-12 bg-primary px-6 text-primary-foreground shadow-[0_0_28px_var(--primary-muted)] hover:bg-primary/90"><Link to="/" hash="projects">Explore AI Models <ArrowRight /></Link></Button>
-                <Button variant="outline" size="lg" disabled title="Resume file coming soon" className="h-12 border-border bg-card/40 px-6 text-muted-foreground"><Download /> Download Resume</Button>
-              </motion.div>
+              <Button asChild size="lg" className="h-12 bg-primary px-6 text-primary-foreground shadow-[0_0_28px_var(--primary-muted)] hover:bg-primary/90">
+              <Link to="/" hash="projects">Explore AI Models <ArrowRight /></Link>
+              </Button>
+  
+              <Button asChild variant="outline" size="lg" className="h-12 border-border bg-card/40 px-6 hover:bg-accent">
+              <a href="/Sahil_Ahire_Resume.pdf" download="Sahil_Ahire_Resume.pdf">
+              <Download /> Download Resume
+              </a>
+              </Button>
+            </motion.div>
             </div>
             <div className="mt-16 flex flex-wrap gap-x-8 gap-y-3 border-t border-border/70 pt-6 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
               <span>Pune, India</span><span>Available for collaboration</span><span>Graduated 2026</span>
