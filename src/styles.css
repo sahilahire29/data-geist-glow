@@ -148,7 +148,9 @@
     font-family: var(--font-sans);
     letter-spacing: 0;
     scroll-behavior: smooth;
-    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 72px 72px;
     background-attachment: fixed;
   }
@@ -189,10 +191,17 @@
   padding: 0.625rem 0.875rem;
   font-size: 0.875rem;
   color: var(--muted-foreground);
-  transition: color 180ms ease, border-color 180ms ease;
-  &:hover { color: var(--primary); border-color: var(--primary); }
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+  &:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
